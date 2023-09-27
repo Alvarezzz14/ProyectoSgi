@@ -1,5 +1,11 @@
+{% extends "basesuadmin.html" %}
+
+{% load static %}
+
+{% block content %}
+
 <head>
-    <link rel="stylesheet" href="../../static/css/stylesformelem.css">
+    <link rel="stylesheet" href="{% static 'css/stylesformelem.css' %}">
     <title>Formulario Registro Usuarios</title>
     
 </head>
@@ -79,5 +85,7 @@
                 </div>
             </form>
         </div>  
-        </section>         
+        </section> 
+        
+{% endblock %}
     

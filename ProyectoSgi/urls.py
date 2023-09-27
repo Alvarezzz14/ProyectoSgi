@@ -19,10 +19,14 @@ from django.urls import path
 #Media
 from django.conf import settings
 from django.conf.urls.static import static
+from UsuariosSena import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.login_view, name='login_view'),
+    path('base/', views.baseAdmin_view, name='baseAdmin_view'),
+    
 ]
 
 # Configuración para servir archivos multimedia en entorno de desarrollo
