@@ -16,3 +16,5 @@ def formPrestamos_view(request):
 
 def formElementos_view(request):
     return render(request, 'superAdmin/formElementos.html')
+
+Hola, soy viuda de Van Gogh, y este es nuetro proyecto. ;)
