@@ -34,8 +34,8 @@
             </div>
             <form action="" method="post">
 
-                 {% csrf_token %}
-                 {{ form }}
+                {% csrf_token %}
+                {{ form.as_p }}
                  
                 <div class="control">
                     <label for="id-type">Tipo de identificación:</label>
