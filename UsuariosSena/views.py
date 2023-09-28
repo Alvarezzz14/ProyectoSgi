@@ -16,3 +16,4 @@ def formPrestamos_view(request):
 
 def formElementos_view(request):
     return render(request, 'superAdmin/formElementos.html')
+
