@@ -10,12 +10,12 @@
     
 </head>
 
-    <section class="section">
+<section class="section">
         
     <!-- Inicio del Forumlario-->
 
         <div class="signupFrm">
-            <form action="" class="form" method="post">
+            <form action="" class="form">
               <h1 class="title">Registro de Usuarios</h1>
 
             <div class="container-1">
@@ -31,16 +31,16 @@
                     <label for="tipoIdentificacion" class="labelformselect">Tipo Documento</label>
                     <div>
                     <select class="selector" name="tipoIdentificacion" id="tipoIdentificacion">
-                    <option value="">C.C</option>
-                    <option value="">Pasaporte</option>
-                    <option value="">T.I</option>
-                    <option value="">Otro</option>
+                    <option value="CC">CC</option>
+                    <option value="PEP">Pasaporte</option>
+                    <option value="TI">TI</option>
+                    <option value="O">Otro</option>
                     </select>
                     </div>
                 </div>
                 <div class="inputContainer">
                     <input type="text" class="inputform" placeholder="a" required>
-                    <label for="" class="labelform" name="numeroIdentificacion">Numero Identificacion</label>
+                    <label for="" class="labelform" name="numeroIdentificacion">Numero Id</label>
                 </div>    
             </div>
             <div class="container-1">
@@ -48,22 +48,27 @@
                     <input type="email" class="inputform" placeholder="a" name="correoSena" required>
                     <label for="correoSena" class="labelform">Correo Sena</label>
                 </div>
+                <div class="inputContainer">
+                    <input type="text" class="inputform" placeholder="a" name="celular" required>
+                    <label for="celular" class="labelform">Celular</label>
+                </div>
                 <div class="selectContainer">                   
                     <label for="rol" class="labelformselect">Rol</label>
                     <div>
-                    <select class="selector" name="rol" id="rol">
-                    <option value="">Instructor</option>
-                    <option value="">Monitor</option>
+                    <select class="selector" name="rol" id="rol"  >
+                    <option value="superAdmin">SuperAdmin</option>
+                    <option value="I">Instructor</option>
+                    <option value="M">Monitor</option>
                     </select>
                     </div>
                 </div>
                 <div class="selectContainer">                   
                     <label for="cuentadante" class="labelformselect">Tipo Cuentadante</label>
                     <div>
-                    <select class="selector" name="cuentadante" id="cuentadante">
-                    <option value="">adminS</option>
-                    <option value="">adminD</option>
-                    <option value="">monitor</option>
+                    <select class="selector" name="cuentadante" id="cuentadante"  >
+                    <option value="adminS">adminSolidario</option>
+                    <option value="adminD">adminDirecto</option>
+                    <option value="monitor">monitor</option>
                     </select>
                     </div>
                 </div>
@@ -71,32 +76,43 @@
                     <label for="tipoContrato" class="labelformselect">Tipo Contrato</label>
                     <div>
                     <select class="selector" name="tipoContrato" id="tipoContrato">
-                    <option value="">Planta</option>
-                    <option value="">Contratista</option>
-                    <option value="">Aprendiz</option>
+                    <option value="P">Planta</option>
+                    <option value="C">Contratista</option>
+                    <option value="A">Aprendiz</option>
 
                     </select>
                     </div>
                 </div>
                 <div class="selectContainer">
-                    <label for="duracionContrato" class="labelformselect" name="duracionContrato">Duracion Contrato</label>
+                    <label for="estadoUsuario" class="labelformselect" name="estadoUsuario">Estado Usuario</label>
                     <div>
-                        <select class="selector" name="duracionContrato" id="duracionContrato">
-                            <option value="">Activo</option>
-                            <option value="">Inactivo</option>
+                        <select class="selector" name="estadoUsuario" id="estadoUsuario">
+                            <option value="A">Activo</option>
+                            <option value="I">Inactivo</option>
                         </select>
                     </div>
                 </div>    
+                
+                
             </div>
             <div class="container-1">
+                <div class="cantidadContainer">                   
+                    <input type="number" class="inputcantidad" name="cantidad" id="cantidad">
+                    <label for="cantidad"  class="labelcantidad">Duracion</label>                                
+                    
+                </div>
                 <div class="inputContainer">
                     <input type="password" class="inputform" placeholder="Contraseña" name="contraSena" required>
                     <label for="contraSena" class="labelform">Contraseña</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="text" class="inputform" placeholder="a" required>
+                    <input type="password" class="inputform" placeholder="a" required>
                     
                     <label for="validacionContraSena" class="labelform" name="validacionContraSena">Repetir Contraseña</label>
+                </div>
+                <div class="selectorimagen" >
+                    <label for="foto" class="" >Adjuntar Foto</label>
+                    <input type="file" name="foto" class="inputsubirfoto">
                 </div>
             </DIV>
                 <div class="container-botones">
@@ -109,6 +125,5 @@
             </form>
             
         </div>  
-
-    </section>
+</section> 
     {% endblock %}

@@ -25,9 +25,10 @@ def login_view(request):
         # Procesa el formulario si se envió
         form = LoginForm(request.POST)
         if form.is_valid():
+            form.save()
             # Aquí puedes realizar acciones adicionales, como la autenticación
             # Si el formulario es válido, redirige al usuario a la página de inicio o a donde sea necesario.
-            return HttpResponseRedirect('/inicio/')
+            return HttpResponseRedirect('baseAdmin_view')
     else:
         # Renderiza un formulario vacío si no se envió uno
         form = LoginForm()
