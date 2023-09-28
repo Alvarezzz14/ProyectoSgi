@@ -87,6 +87,10 @@ margin-bottom: 17px;
   z-index: 0;
 }
 
+.labelsubirfoto{
+  font-size: 0.8rem;
+}
+
 /*Estilos BOtones */
 
 .container-botones{
@@ -142,7 +146,7 @@ margin-bottom: 17px;
 }
 
 .selectorimagen label{
-font-size: 1rem;
+font-size: 0.6rem;
 font-weight: 600;
 color: rgb(0, 0, 0);
 
