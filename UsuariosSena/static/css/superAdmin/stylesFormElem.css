@@ -1,5 +1,6 @@
 .section{
   width: 98%;
+  box-shadow:  2px 5px 5px 4px #b3b3b3;
 }
 
 
@@ -132,7 +133,7 @@ margin-bottom: 17px;
   margin: 0 10px;
   padding: 15px 30px;
   border: none;
-  background-color: #617c79;
+  background-color: #238276;
   color: white;
   border-radius: 6px;
   cursor: pointer;
@@ -141,7 +142,7 @@ margin-bottom: 17px;
 }
 
 .submitBtn:hover {
-  background-color: #55b94e;
+  background-color: #1689ef;
   transform: translateY(-2px);
 }
 

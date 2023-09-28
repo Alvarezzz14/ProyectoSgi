@@ -22,3 +22,8 @@ enlaces.forEach((enlace) => {
         event.target.classList.add("active");
     });
 });
+
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+}

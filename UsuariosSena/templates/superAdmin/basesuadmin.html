@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="es">
     {% load static %}
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/css/superAdmin/stylebasesuadmin.css">
+    <link rel="stylesheet" href="{% static 'css/superAdmin/stylesBaseSuAdmin.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <title>Base S.A</title>
 </head>
@@ -14,7 +13,7 @@
     <header >
         <div class="header">
             <div class="img">
-                <img src="../../static/img/Copia de LOGO SSIH.svg" alt="logo sena">
+                <img src="{% static 'img/Copia de LOGO SSIH.svg' %}" alt="logo sena">
             </div>
             <span class="material-icons-sharp" id="hambur">
                 menu
@@ -25,24 +24,31 @@
                     <p>Usuario</p>
                     <p>Super Administrado</p>
                 </div>  
-                <img src="../../static/img/usuario.png" alt="Usuario">
+                <img src="{% static 'img/usuario.png' %}" alt="Usuario">
             </div>
             
 
         </div>
     </header>
 
-    <section class="contenedor">
+    <section  class="contenedor">
         <aside class="aside" id="aside">
             <div class="contenedor-barra-lateral">
                 <div class="barra-lateral">
-                    <a href="">
+                    
+                    <a href="" class="logos">
+                        <span class="material-icons-sharp" id="hambur">
+                            menu
+                        </span>
+                        <img src="{% static 'img/logo-sena-verde-svg-2022.svg' %}" alt="">
+                    </a>
+                    <a href="#">
                         <span class="material-icons-sharp">
                             home
                         </span>
                         Home
                     </a>
-                    <a href="">
+                    <a href="#">
                         <span class="material-icons-sharp">
                             person
                         </span>
@@ -75,21 +81,17 @@
                 </div>
             </div>
         </aside>  
-        <!-- Contenido cambiante de las plantillas Hijas -->
-  {% block content %}
 
+        <!-- Cotenido principal -->
+        {% block content %}
 
-  {% endblock %}
+        {% endblock %}
+       
+        <!-- fin Cotenido principal -->
+
     </section>
-     
-    <footer>
-        <div class="footer">
-            <img src="../../static/img/SSIH.png" alt="">
-        </div>
 
-    </footer> 
-
-    <script src="../../static/js/scriptbase.js"></script>
+    <script src="{% static 'js/scriptBaseSuAdmin.js' %}"></script>
 
 </body>
 </html>
