@@ -31,7 +31,12 @@ urlpatterns = [
     path('formElementos/', views.formElementos_view, name='formElementos_view'),
     path('consultarUsuario/', views.consultarUsuario_view, name='consultarUsuario_view'),
     
-    
+    ##Form Pruebas 
+    path('CrearUsuarioPrueba/', views.crear_usuario, name='crear_usuario'),
+    path('CrearElementoPrueba/', views.crear_elemento, name='crear_elemento'),
+    path('CrearPrestamoPrueba/', views.crear_prestamo, name='crear_prestamo'),
+
+
 ]
 
 # Configuración para servir archivos multimedia en entorno de desarrollo

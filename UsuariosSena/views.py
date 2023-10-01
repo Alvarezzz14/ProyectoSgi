@@ -1,5 +1,7 @@
-from django.shortcuts import render, HttpResponseRedirect
-from .forms import LoginForm
+from django.shortcuts import render, HttpResponseRedirect, redirect
+# from .forms import LoginForm
+from .forms import UsuariosSenaForm, LoginForm, ElementosForm, PrestamosForm
+
 
 # Create your views here.
 
@@ -37,3 +39,39 @@ def login_view(request):
         form = LoginForm()
 
     return render(request, 'registration/login.html', {'form': form})
+
+#Formulario Crear Usuarios
+
+def crear_usuario(request):
+    if request.method == 'POST':
+        form = UsuariosSenaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_usuarios')  # Redireccionar a la lista de usuarios
+    else:
+        form = UsuariosSenaForm()
+    
+    return render(request, 'formPruebas/crear_usuario.html', {'form': form})
+
+def crear_elemento(request):
+    if request.method == 'POST':
+        form = ElementosForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_elementos')  # Redireccionar a la lista de elementos
+    else:
+        form = ElementosForm()
+    
+    return render(request, 'formPruebas/crear_elemento.html', {'form': form})
+
+
+def crear_prestamo(request):
+    if request.method == 'POST':
+        form = PrestamosForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_elementos')  # Redireccionar a la lista de elementos
+    else:
+        form = PrestamosForm()
+    
+    return render(request, 'formPruebas/crear_prestamo.html', {'form': form})
