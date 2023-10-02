@@ -16,8 +16,10 @@
 <body>
     <h1>Formulario de Usuarios</h1>
     <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
+        <!-- Toquen de seguridad -->
+        {% csrf_token %} 
+        {{ form.as_p }} 
+        <!-- Como p para que lo reconozca como texto. -->
         <button type="submit">Guardar Usuario</button>
     </form>
 </body> {% endblock %}
