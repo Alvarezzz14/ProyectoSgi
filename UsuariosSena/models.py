@@ -6,7 +6,7 @@ from .choices import roles, cuentadantes, estado, categoriaElemento, tipoIdentif
 # Create your models here.
 class UsuariosSena(models.Model):
     nombre = models.CharField(max_length=25)
-    apellido = models.CharField(max_length=25)
+    apellidoo = models.CharField(max_length=25)
     tipoIdentificacion = models.CharField(max_length=25,choices=tipoIdentificacion,default='CC')
     numeroIdentificacion = models.CharField(max_length=25)
     correoSena  = models.EmailField()
@@ -45,11 +45,8 @@ class Elementos(models.Model):
 class Prestamo(models.Model):
     fechaEntrega = models.DateField()
     fechaDevolucion = models.DateField()
-    elementoSerial = models.ForeignKey(Elementos,null=False,blank=True,on_delete=models.CASCADE)
-    usuarioSena = models.ForeignKey(UsuariosSena,null=False,blank=True,on_delete=models.CASCADE)
+    #serialSenaElemento = models.ForeignKey(Elementos,null=False,blank=True,on_delete=models.CASCADE)
+    #nombre = models.ForeignKey(UsuariosSena,null=False,blank=True,on_delete=models.CASCADE)
     observacionesPrestamo = models.CharField(max_length=25)
     firmaDigital = models.ImageField(upload_to='firmaDigital/', blank=True, null=True)  # Campo para la foto
     id = models.BigAutoField(primary_key=True)
-
-
-# class formularioEstadoCrud

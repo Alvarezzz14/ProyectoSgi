@@ -30,12 +30,7 @@ urlpatterns = [
     path('formPrestamos/', views.formPrestamos_view, name='formPrestamos_view'),
     path('formElementos/', views.formElementos_view, name='formElementos_view'),
     path('consultarUsuario/', views.consultarUsuario_view, name='consultarUsuario_view'),
-    
-    ##Form Pruebas 
-    path('CrearUsuarioPrueba/', views.crear_usuario, name='crear_usuario'),
-    path('CrearElementoPrueba/', views.crear_elemento, name='crear_elemento'),
-    path('CrearPrestamoPrueba/', views.crear_prestamo, name='crear_prestamo'),
-
+    path('listarPrestamo/', views.listar_prestamos, name='listar_prestamos'),
 
 ]
 

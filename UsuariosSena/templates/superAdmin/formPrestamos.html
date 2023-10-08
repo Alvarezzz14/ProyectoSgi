@@ -16,33 +16,35 @@
 
        
     <div class="signupFrm">
-            <form action="" class="form">
+            <form action="/formPrestamos/" class="form" method="post">
             <h1 class="title">Crear Prestamo</h1>
+
+            {% csrf_token %}
 
             <div class="container-1">
                 <div class="fechaContainer">
-                    <input type="date" class="inputform" placeholder="fechaEntrega" name="fechaentrega" required>
+                    <input type="date" class="inputform" placeholder="fechaentrega" name="fechaEntrega" required>
                     <label for="fechaEntrega" class="labelform">Fecha Entrega</label>
                 </div>
                 <div class="fechaContainer">
-                    <input type="date" class="inputform" placeholder="fechaDevolucion" name="fechadevolucion" required>
+                    <input type="date" class="inputform" placeholder="fechadevolucion" name="fechaDevolucion" required>
                     <label for="fechaDevolucion" class="labelform">Fecha Devoluc</label>
                 </div>
             <div class="inputContainer">
-                <input type="text" class="inputform" placeholder="©" name="elementoSerial" required>
-                <label for="elementoSerial" class="labelform">Serial Elemento</label>
+                <input type="text" class="inputform" placeholder="serialSenaElemento" name="serialSenaElemento" required>
+                <label for="" class="labelform">Serial Elemento</label>
             </div>
             
         </div>
         <div class="container-1">
             <div class="inputContainer">
-                <input type="text" class="inputform" placeholder="a" name="usuarioSena" required>
-                <label for="usuarioSena" class="labelform">Nombre Instructor</label>
+                <input type="text" class="inputform" placeholder="nombre" name="nombre" required>
+                <label for="" class="labelform">Nombre Instructor</label>
             </div>  
 
             <div class="inputContainer">
                 <input type="text" class="inputform" placeholder="a" name="observacionesPrestamo" required>
-                <label for="observacionesPrestamo" class="labelform">Observaciones</label>
+                <label for="" class="labelform">Observaciones</label>
             </div>
             <div class="selectorimagen">
                 <input type="file" accept="image/*" class="inputsubirfoto">
