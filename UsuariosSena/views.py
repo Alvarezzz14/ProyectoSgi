@@ -123,6 +123,7 @@ def formElementos_view(request):
         elementos= Elementos(fechaElemento=fechaElementoVar, nombreElemento=nombreElementoVar, categoriaElemento=categoriaElementoVar, estadoElemento=estadoElementoVar, cantidadElemento=cantidadElementoVar, valorUnidadElemento=valorUnidadElementoVar, valorTotalElemento=valorTotalElementoVar, serialSenaElemento=serialSenaElementoVar, descripcionElemento=descripcionElementoVar, observacionElemento=observacionElementoVar, facturaElemento=facturaElementoVar)
         elementos.save()
     return render(request, 'superAdmin/formElementos.html')
+
 def listar_elementos(request):
     elementos = Elementos.objects.all()
     return render(request, 'superAdmin/listarElemento.html', {'elementos': elementos})
