@@ -53,15 +53,10 @@ def registroUsuario_view(request):
         duracionContratoVar=request.POST.get('cantidad')
         contraSenaVar=request.POST.get('contraSena')
         validacionContraSenaVar = request.POST.get('validacionContraSena')
-        fotoUsuarioVar=request.POST.get('fotoUsuario')
+        fotoUsuarioVar=request.FILES.get('fotoUsuario')
 
         user= UsuariosSena(nombre=nombreVar, apellidoo=apellidoVar, tipoIdentificacion=tipoIdentificacionVar, numeroIdentificacion=numeroIdentificacionVar, correoSena=correoSenaVar, celular=celularVar, rol=rolVar, cuentadante=cuentadanteVar, tipoContrato=tipoContratoVar, duracionContrato=duracionContratoVar, contraSena=contraSenaVar, validacionContraSena=validacionContraSenaVar, fotoUsuario=fotoUsuarioVar)
         user.save()
-
-        variable = UsuariosSena.objects.get(id = 1)
-
-        print(variable.apellidoo)
-
 
 
     return render(request, 'superAdmin/registroUsuario.html')

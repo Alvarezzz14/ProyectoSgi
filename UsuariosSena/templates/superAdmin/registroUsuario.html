@@ -15,17 +15,19 @@
     <!-- Inicio del Forumlario-->
 
         <div class="signupFrm">
-            <form action="" class="form">
-              <h1 class="title">Registro de Usuarios</h1>
-
+            <form action="/regUsuario/" class="form" method="post">
+                <h1 class="title">Registro de Usuarios</h1>
+  
+                {% csrf_token %}
+                
             <div class="container-1">
                 <div class="inputContainer">
                     <input type="text" class="inputform" placeholder="Nombres" name="nombre" required>
                     <label for="" class="labelform">Nombres</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="text" class="inputform" placeholder="a" required>
-                    <label for="" class="labelform" name="apellido">Apellidos</label>
+                    <input type="text" class="inputform" name="apellidoo" placeholder="a" required>
+                    <label for="" class="labelform" name="apellidoo">Apellidos</label>
                 </div>
                 <div class="selectContainer">                   
                     <label for="tipoIdentificacion" class="labelformselect">Tipo Documento</label>
@@ -39,7 +41,7 @@
                     </div>
                 </div>
                 <div class="inputContainer">
-                    <input type="text" class="inputform" placeholder="a" required>
+                    <input type="text" class="inputform" name="numeroIdentificacion" placeholder="a" required>
                     <label for="" class="labelform" name="numeroIdentificacion">Numero Id</label>
                 </div>    
             </div>
@@ -106,9 +108,9 @@
                     <label for="contraSena" class="labelform">Contraseña</label>
                 </div>
                 <div class="inputContainer">
-                    <input type="password" class="inputform" placeholder="a" required>
+                    <input type="password" class="inputform" placeholder="a" name="validacionContraSena" required>
                     
-                    <label for="validacionContraSena" class="labelform" name="validacionContraSena">Repetir Contraseña</label>
+                    <label for="" class="labelform" name="validacionContraSena">Repetir Contraseña</label>
                 </div>
                 <div class="selectorimagen" >
                     <label for="foto" class="" >Adjuntar Foto</label>
