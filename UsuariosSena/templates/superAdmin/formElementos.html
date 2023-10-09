@@ -16,8 +16,10 @@
     
            
         <div class="signupFrm">
-            <form action="" class="form">
-              <h1 class="title">Crear Elemento</h1>
+            <form action="/formElementos/" class="form" method="post">
+              <h1 class="title">Registrar Elemento</h1>
+              {% csrf_token %}
+
     
             <div class="container-1">
                 <div class="fechaContainer">
@@ -55,6 +57,10 @@
                 <div class="inputContainervalor">                   
                     <input type="text" class="inputformvalor" placeholder="a" name="valorUnidadElemento" id="valorUnidad">
                     <label for="valorUnidadElemento"  class="labelformvalor">Valor Unidad</label>                                
+                </div>
+                <div class="inputContainervalor">                   
+                    <input type="text" class="inputformvalor" placeholder="a" name="valorTotalElemento" id="valorTotalElemento">
+                    <label for="valorTotalElemento"  class="labelformvalor">Valor Total</label>                                
                 </div>
             </div>
             <div class="container-1">
